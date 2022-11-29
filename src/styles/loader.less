@@ -1,0 +1,40 @@
+@loader-display : inline-block;
+@loader-dots-size : 10px;
+@loader-dots-margin : 3px 2px;
+@loader-animation : loader 0.8s linear infinite alternate;
+@iterations: 5;
+@loader-dots-delays: -1s , -0.8s , -0.26666s , -0.8s , -1s;
+@loader-dots-opacities : 0.6 , 0.8 , 1 , 0.8 , 0.4 ;
+
+
+.loader-nth-child(@n) when(@n >0 ){
+  &:nth-child(@{n}){
+    @loader-dot-delay : extract(@loader-dots-delays , @n);
+    @loader-dot-opacity : extract(@loader-dots-opacities , @n);
+    -webkit-animation-delay :  @loader-dot-delay;
+    animation-delay : @loader-dot-delay;
+    background: rgba(45 , 134 , 251 , @loader-dot-opacity );
+  }
+  .loader-nth-child(@n - 1);
+}
+
+.loader{
+  position: fixed;
+  left: 45%;
+  top: 45%;
+  z-index: 9999;
+  display: @loader-display;
+  padding: 0;
+  span {
+    vertical-align: middle;
+    border-radius: 100%;
+    display: @loader-display;
+    width: @loader-dots-size;
+    height: @loader-dots-size;
+    margin : @loader-dots-margin;
+    -webkit-animation: @loader-animation;
+    animation: @loader-animation;
+    .loader-nth-child(@iterations);
+  }
+
+}

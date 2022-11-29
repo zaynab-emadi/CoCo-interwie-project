@@ -2,6 +2,9 @@ import React, {useEffect} from 'react';
 import {fetchTopEngagedPages, fetchTopFollowers} from "../redux/usersSlice";
 import {useDispatch , useSelector} from "react-redux";
 import "../styles/list.css";
+import Loader from "../layouts/loader";
+import Row from "../components/row";
+
 function List() {
     const dispatch = useDispatch();
     const {topEngaged , topFollowers , loading  } = useSelector((state) => state.users);
@@ -16,23 +19,27 @@ function List() {
     if(loading) {
         return (
             <>
-                <div className="loader">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <Loader/>
             </>
         )
     }return (
         <>
             <div className="container">
-                <div className="topEngaged">
+                <div className="headersContainer">
                     <h2>Top Engaged</h2>
-                </div>
-                <div className="topFollowers">
                     <h2>Top Followers</h2>
+                </div>
+                <div className="tableBox">
+                    <div className="engagedColumn">
+                        {/*{topEngaged.map((item) => {
+                            return (
+                                <Row />
+                            )
+                        })}*/}
+                    </div>
+                    <div className="followersColumn">
+
+                    </div>
                 </div>
             </div>
         </>
