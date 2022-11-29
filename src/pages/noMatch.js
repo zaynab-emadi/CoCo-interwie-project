@@ -2,7 +2,9 @@ import React from 'react';
 
 function NoMatch() {
     return (
-        <div></div>
+        <div>
+            page not found
+        </div>
     );
 }
 

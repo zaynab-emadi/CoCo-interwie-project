@@ -1,10 +1,12 @@
-import "./App.css";
+import RoutesIndex from "./routes/RoutesIndex";
 
 function App() {
   return (
-      <>
-          <p>fuck islamic republic of iran</p>
-      </>
+      <div>
+          <RoutesIndex/>
+      </div>
+
+
   );
 }
 
