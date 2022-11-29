@@ -1,0 +1,32 @@
+@loader-display : inline-block;
+@loader-dots-size : 10px;
+@loader-dots-margin : 3px 2px;
+@loader-animation : loader 0.8s linear infinite alternate;
+@iterations: 5;
+
+.loader-nth-child(@n) when(@n >0 ){
+  &:nth-child(@{n}){
+    -webkit-animation-delay :  -1s + (@n - 1)*0.2s;
+    animation-delay : -1s + (@n - 1)*0.2s;
+    background: rgba(245 , 103 , 115 , 1);
+  }
+  .loader-nth-child(@n - 1);
+}
+.loader{
+  display: @loader-display;
+/*  position: absolute;
+  top: 500;*/
+  padding: 0;
+  span {
+    vertical-align: middle;
+    border-radius: 100%;
+    display: @loader-display;
+    width: @loader-dots-size;
+    height: @loader-dots-size;
+    margin : @loader-dots-margin;
+    -webkit-animation: @loader-animation;
+    animation: @loader-animation;
+    .loader-nth-child(@iterations);
+  }
+
+}
