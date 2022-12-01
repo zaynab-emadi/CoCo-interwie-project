@@ -1,0 +1,84 @@
+.main {
+  width: 100%;
+  height: 100%;
+  .containerDetail {
+    position: fixed;
+    top: 20%;
+    width: 90%;
+    height: 60%;
+    margin: 0 5% 0 5%;
+    padding: 2%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-image: linear-gradient(45deg, #fd02e1, #f2e507) 30;
+    border-width: 6px;
+    border-style: solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .profile {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      .picBorder {
+        padding: 1px;
+        border: #2323a8 solid;
+        border-radius: 100%;
+        width: 80px;
+        height: 80px;
+        margin: 1%;
+        .profilePic {
+          width: 80px;
+          height: 80px;
+          border-radius: inherit;
+        }
+      }
+      .infoBox{
+        display: flex;
+        flex-direction: column;
+        .instagramId {
+          color :  #2323a8;
+        }
+        .fullName {
+          font-weight: bold;
+        }
+      }
+    }
+    .table{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .column {
+        width: 8.33% * 2;
+        height: 100%;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 1%;
+        h2 , h5 {
+          margin-left: 8%;
+        }
+        .topRow , .downRow{
+          border-radius: 20px;
+          border : #f5f0f0 solid 1px;
+        }
+
+      }
+    }
+  }
+}
+@colors: #c9ffec, #f2ce1b, #195dbd , #cc4747;
+
+.for-each-loop(@index) when (@index > 0){
+  @color: extract(@colors , @index);
+  .color@{index}{
+  background-color: @color;
+}
+  .for-each-loop(@index - 1);
+}
+.for-each-loop(length(@colors));
+
+.whiteFont {
+  color : white;
+}
