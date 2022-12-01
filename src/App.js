@@ -2,11 +2,9 @@ import RoutesIndex from "./routes/RoutesIndex";
 
 function App() {
   return (
-      <div>
-          <RoutesIndex/>
-      </div>
-
-
+    <div>
+      <RoutesIndex />
+    </div>
   );
 }
 

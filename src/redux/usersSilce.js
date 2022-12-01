@@ -42,14 +42,13 @@ export const usersSlice = createSlice({
                 totalItemsTopEngaged : action.payload.total,
             }
         });
-        builder.addCase(fetchTopEngagedPages.rejected , (state , action) => {
-
-            return {
-                ...state,
-                topEngaged: [],
-                loading: false,
-                error: action.payload,
-            }
+        builder.addCase(fetchTopEngagedPages.rejected, (state, action) => {
+          return {
+            ...state,
+            topEngaged: [],
+            loading: false,
+            error: action.payload,
+          };
         });
         builder.addCase(fetchTopFollowers.pending , (state) => {
             return {
