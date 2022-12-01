@@ -24,24 +24,29 @@ function List() {
         )
     }return (
         <>
+            <div className="main">
             <div className="container">
-                <div className="headersContainer">
-                    <h2>Top Engaged</h2>
-                    <h2>Top Followers</h2>
-                </div>
-                <div className="tableBox">
-                    <div className="engagedColumn">
-                        {/*{topEngaged.map((item) => {
+                    <div className="columns">
+                        <h2>Top Engaged</h2>
+                        {topEngaged.map((item) => {
                             return (
-                                <Row />
+                                <Row instagramId={item.instagramId}  profilePicUrl = {item.profilePicUrl} fullName ={item.fullName
+                                }
+                                />
                             )
-                        })}*/}
+                        })}
                     </div>
-                    <div className="followersColumn">
-
+                    <div className="columns">
+                        <h2>Top Followers</h2>
+                        {topFollowers.map((item) => {
+                            return (
+                                <Row instagramId={item.instagramId}  profilePicUrl = {item.profilePicUrl} fullName ={item.fullName} />
+                            )
+                        })}
                     </div>
                 </div>
             </div>
+
         </>
     )
 }

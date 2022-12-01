@@ -1,0 +1,44 @@
+/*
+.col-maker(@i) when (@i > 0) {
+  .col-{@i}-num{
+  width: 8.33% * @i ;
+}
+  .col-maker(@i - 1)
+}
+.col-maker(12)*/
+@row-height : 80% / 10 ;
+.row {
+  margin : 0 0 2% 5%;
+  padding: 1%;
+  background-color: white;
+  width: 80%;
+  height: 8%;
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  position: relative;
+}
+.profilePic{
+  border-radius: 100%;
+  width: 8.33%;
+  padding: 1%;
+}
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-left: 1%;
+}
+.fullName {
+  color: darkgray;
+  font-size: 12px;
+
+}
+.editDots {
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    right: 3%;
+
+
+}
