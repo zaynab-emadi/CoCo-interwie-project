@@ -1,0 +1,86 @@
+.main {
+  width: 100%;
+  height: 100%;
+}
+.main .containerDetail {
+  position: fixed;
+  top: 20%;
+  width: 90%;
+  height: 60%;
+  margin: 0 5% 0 5%;
+  padding: 2%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-image: linear-gradient(45deg, #fd02e1, #f2e507) 30;
+  border-width: 6px;
+  border-style: solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.main .containerDetail .profile {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.main .containerDetail .profile .picBorder {
+  padding: 2px;
+  border: #2323a8 solid;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  margin: 1%;
+}
+.main .containerDetail .profile .picBorder .profilePic {
+  width: 80px;
+  height: 80px;
+  border-radius: inherit;
+}
+.main .containerDetail .profile .infoBox {
+  display: flex;
+  flex-direction: column;
+}
+.main .containerDetail .profile .infoBox .instagramId {
+  color: #2323a8;
+}
+.main .containerDetail .profile .infoBox .fullName {
+  font-weight: bold;
+}
+.main .containerDetail .table {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.main .containerDetail .table .column {
+  width: 16.66%;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1%;
+}
+.main .containerDetail .table .column h2,
+.main .containerDetail .table .column h5 {
+  margin-left: 8%;
+}
+.main .containerDetail .table .column .topRow,
+.main .containerDetail .table .column .downRow {
+  border-radius: 20px;
+  border: #f5f0f0 solid 1px;
+}
+.color4 {
+  background-color: #cc4747;
+}
+.color3 {
+  background-color: #195dbd;
+}
+.color2 {
+  background-color: #f2ce1b;
+}
+.color1 {
+  background-color: #c9ffec;
+}
+.whiteFont {
+  color: white;
+}
