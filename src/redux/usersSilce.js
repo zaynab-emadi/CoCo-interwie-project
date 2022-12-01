@@ -6,7 +6,6 @@ const initialState = {
     error : "",
     topEngaged : [],
     topFollowers : [],
-    details : [],
     loading: false,
     totalItemsTopEngaged: 1,
     totalItemsTopFollower: 1,

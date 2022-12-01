@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {fetchTopEngagedPages, fetchTopFollowers} from "../redux/usersSlice";
+import {fetchTopEngagedPages, fetchTopFollowers} from "../redux/usersSilce";
 import {useDispatch , useSelector} from "react-redux";
 import "../styles/list.css";
 import Loader from "../layouts/loader";
