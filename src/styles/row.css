@@ -1,0 +1,48 @@
+.row {
+  margin: 0 0 2% 5%;
+  padding: 1%;
+  background-color: white;
+  width: 80%;
+  height: 8%;
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  position: relative;
+}
+.row:hover {
+  transform: scale(1.06);
+}
+.row .profilePic {
+  border-radius: 100%;
+  width: 8.33%;
+  padding: 1%;
+}
+.row .infoBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-left: 1%;
+}
+.row .infoBox .fullName {
+  color: darkgray;
+  font-size: 12px;
+}
+.row .infoBox:hover {
+  cursor: pointer;
+}
+.row .infoBox:hover .instagramId {
+  background: -webkit-linear-gradient(45deg, #fd02e1, #f2e507);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.row .infoBox:hover .fullName {
+  color: black !important;
+}
+.row .editDots {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 3%;
+  font-size: 6px;
+}
