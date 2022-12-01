@@ -76,11 +76,11 @@ function Detail() {
             <div className="column">
               <div className="topRow">
                 <h5>Period Eng Rate</h5>
-                <h2>{`${engagement*100}% `}</h2>
+                <h2>{`${(engagement*100).toFixed(2)}% `}</h2>
               </div>
               <div className="downRow color2">
                 <h5>Total Eng Rate</h5>
-                <h2>{`${totalEngagement*100}%`}</h2>
+                <h2>{`${(totalEngagement*100).toFixed(2)}%`}</h2>
               </div>
             </div>
             <div className="column color1">
