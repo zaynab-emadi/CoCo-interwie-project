@@ -9,13 +9,11 @@ function Row(props) {
                 <div className="instagramId">{props.instagramId}</div>
                 <div className="fullName">{props.fullName}</div>
             </div>
-            <div className="editDots">
-
-                <span>.</span>
-                <span>.</span>
-                <span>.</span>
-
-            </div>
+            <ul className="editDots">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
         </>
     );
