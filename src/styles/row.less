@@ -1,11 +1,3 @@
-/*
-.col-maker(@i) when (@i > 0) {
-  .col-{@i}-num{
-  width: 8.33% * @i ;
-}
-  .col-maker(@i - 1)
-}
-.col-maker(12)*/
 @row-height : 80% / 10 ;
 .row {
   margin : 0 0 2% 5%;
@@ -20,16 +12,9 @@
 
 
   &:hover {
-    transform: scale(1.07);
-    cursor: pointer;
-    .instagramId {
-      background:  -webkit-linear-gradient(45deg ,#fd02e1 , #f2e507) ;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    };
-    .fullName{
-      color: black !important;
-    }
+
+    transform: scale(1.06);
+
   }
   .profilePic{
     border-radius: 100%;
@@ -44,6 +29,17 @@
     .fullName {
       color: darkgray;
       font-size: 12px;
+    }
+    &:hover{
+      cursor: pointer;
+      .instagramId {
+        background:  -webkit-linear-gradient(45deg ,#fd02e1 , #f2e507) ;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      };
+      .fullName{
+        color: black !important;
+      }
     }
   }
   .editDots {

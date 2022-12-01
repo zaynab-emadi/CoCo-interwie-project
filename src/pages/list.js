@@ -14,11 +14,10 @@ function List() {
     useEffect(() => {
         dispatch(fetchTopFollowers())
     },[dispatch]);
-    console.log("followers" , topFollowers);
-    console.log(topEngaged);
     if(loading) {
         return (
             <>
+
                 <Loader/>
             </>
         )
