@@ -5,7 +5,6 @@ import { fetchDetails } from "../redux/detailSlice";
 import Loader from "../layouts/loader";
 import "../styles/detail.css";
 
-
 function Detail() {
   const { instagramId } = useParams();
   console.log(instagramId);
@@ -14,7 +13,7 @@ function Detail() {
   useEffect(() => {
     dispatch(fetchDetails(instagramId));
   }, [dispatch, instagramId]);
-  console.log(detail);
+
   const {
     fullName,
     avgComment,
@@ -40,11 +39,11 @@ function Detail() {
         <div className="containerDetail">
           <div className="profile">
             <div className="picBorder">
-            <img
-              src={`${profilePic}`}
-              alt={`${instagramId}`}
-              className="profilePic"
-            ></img>
+              <img
+                src={`${profilePic}`}
+                alt={`${instagramId}`}
+                className="profilePic"
+              ></img>
             </div>
             <div className="infoBox">
               <div className="instagramId">{`@${instagramId}`}</div>
@@ -55,21 +54,33 @@ function Detail() {
             <div className="column">
               <div className="topRow color3">
                 <h5 className="whiteFont">Followers</h5>
-                <h2 className="whiteFont">{followerCount}</h2>
+                <h2 className="whiteFont">
+                  {followerCount / 1000000 > 1
+                    ? `${(followerCount / 1000000).toFixed(2)}M`
+                    : followerCount / 1000 > 1
+                    ? `${(followerCount / 1000).toFixed(2)}k`
+                    : followerCount}
+                </h2>
               </div>
               <div className="downRow">
                 <h5>Following</h5>
-                <h2>{followingCount}</h2>
+                <h2>
+                  {followingCount / 1000000 > 1
+                    ? `${(followingCount / 1000000).toFixed(2)}M`
+                    : followingCount / 1000 > 1
+                    ? `${(followingCount / 1000).toFixed(2)}k`
+                    : followingCount}
+                </h2>
               </div>
             </div>
             <div className="column">
               <div className="topRow">
                 <h5>Period Eng Rate</h5>
-                <h2>{engagement}</h2>
+                <h2>{`${engagement*100}% `}</h2>
               </div>
               <div className="downRow color2">
                 <h5>Total Eng Rate</h5>
-                <h2>{totalEngagement}</h2>
+                <h2>{`${totalEngagement*100}%`}</h2>
               </div>
             </div>
             <div className="column color1">
@@ -85,11 +96,23 @@ function Detail() {
             <div className="column ">
               <div className="topRow color4">
                 <h5>Avg Likes</h5>
-                <h2>{avgLike}</h2>
+                <h2>
+                  {avgLike / 1000000 > 1
+                    ? `${(avgLike / 1000000).toFixed(2)}M`
+                    : avgLike / 1000 > 1
+                    ? `${(avgLike / 1000).toFixed(2)}k`
+                    : avgLike}
+                </h2>
               </div>
               <div className="downRow">
                 <h5>Avg Comments</h5>
-                <h2>{avgComment}</h2>
+                <h2>
+                  {avgComment / 1000000 > 1
+                    ? `${(avgComment / 1000000).toFixed(2)}M`
+                    : avgComment / 1000 > 1
+                    ? `${(avgComment / 1000).toFixed(2)}k`
+                    : avgComment}
+                </h2>
               </div>
             </div>
           </div>
